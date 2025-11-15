@@ -1,0 +1,38 @@
+[project]
+name = "nonebot-plugin-delta-password"
+version = "1.0.0"
+description = "三角洲行动每日密码查询插件"
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    {name = "mmxd12", email = "2529464880@qq.com"},
+]
+dependencies = [
+    "nonebot2>=2.4.4",
+    "nonebot-adapter-qq>=1.6.5",
+    "httpx>=0.28.1",
+    "pydantic>=2.0.0",
+]
+
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.9"
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" },
+    { name = "QQ", module_name = "nonebot.adapters.qq" },
+]
+
+[tool.nonebot.plugin]
+plugins = ["nonebot_plugin_delta_password"]
+module_name = "nonebot_plugin_delta_password"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
