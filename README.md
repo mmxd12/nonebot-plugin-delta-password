@@ -17,15 +17,12 @@
 
 ## 🔧 配置方法
 
-在 NoneBot2 的 `bot.py` 或插件加载文件中添加：
+在 NoneBot2 的pyproject.toml文件中添加以下配置：
 
-python
+- 在dependencies = [...] 中添加："nonebot-plugin-delta-password>=x.x.x" # 请替换为最新版本号
+然后在[tool.nonebot.plugins] 添加：
+- "nonebot-plugin-delta-password" = ["nonebot_plugin_delta_password"]
 
-    nonebot.load_plugin('nonebot-plugin-delta-password')
-
-## 🔧 安装依赖：
-
-    pip install httpx pydantic
 
 ### 📋 基本命令
 
@@ -54,24 +51,13 @@ python
 
 - ✅ OneBot V11
 - ✅ QQ官方适配器
-- 理论上其他应该能用只用这两个
-
-## 📝 更新日志
-
-### v1.0.0
-- 🎉 初始版本发布
-- 🔐 实现基本密码查询功能
-- 🖼️ 支持图片查看功能
-- 📱 添加QQ官方适配器支持
-- 😊 丰富的emoji支持
-
+- 理论上其他应该能用，个人只用这两个
 
 ## ✅ 依赖要求
 
 - Python 3.9+
-- httpx 0.24.0+
+- httpx 0.28.1+
 - NoneBot 2.0.0+
-- pydantic 2.0.0+
 
 ## 📜 许可证
 
